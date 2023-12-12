@@ -10,6 +10,9 @@ cover-img: assets/img/world_map.jpg
             font-family: 'Courier New', monospace;
             font-style: italic;
         }
+        .filedescription {
+            
+        }
     </style>
     </head>
 <body>
@@ -33,11 +36,29 @@ cover-img: assets/img/world_map.jpg
 
             <ul class="filename">
                 <li>articles.tsv</li>
+                <ul class="filedescription">
+                    <li>Containing all navigable articles in the game.</li>
+                </ul>
                 <li>categories.tsv</li>
+                <ul class="filedescription">
+                    <li>The categorz and sub-categories that each article falls into.</li>
+                </ul>
                 <li>links.tsv</li>
+                <ul class="filedescription">
+                    <li>Containing all links between articles. It should be noted that this set is directed, A -> B does not imply B -> A.</li>
+                </ul>
                 <li>paths_finished.tsv</li>
+                <ul class="filedescription">
+                    <li>Containing all paths that were finished by players in the game.</li>
+                </ul>
                 <li>paths_unfinished.tsv</li>
+                <ul class="filedescription">
+                    <li>Containing all paths that were unfinished by players in the game.</li>
+                </ul>
                 <li>shortest-path-distance-matrix.txt</li>
+                <ul class="filedescription">
+                    <li>A matrix containing the shortest distances between all articles.</li>
+                </ul>
             </ul>
 
             We decided to investigate if there was a bias towards certain countries or world regions in both the articles that the game is based on, and subsequently how people played the game.
