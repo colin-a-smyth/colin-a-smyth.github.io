@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Jellyfish401 Data Story
+title: Jellyfish401
 
 # Your name to show in the footer
 author: Blanche, Tim, Zaineb, Francisco and Colin
@@ -31,7 +31,7 @@ author: Blanche, Tim, Zaineb, Francisco and Colin
 ################
 
 # Image to show in the navigation bar - works best with a square image
-# Remove this parameter if you don't want an image in the navbar
+# Remove this parameter if you don't want an image in the navbar -- AVATAR REMOVED
 # avatar: "/assets/img/avatar-icon.png"
 
 # By default, the image is cut into a circle. You can disable this behaviour by setting 'round-avatar: false'
@@ -97,7 +97,7 @@ social-network-links:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-# url-pretty: "MyWebsite.com"
+url-pretty: "colin-a-smyth.github.io"
 
 # Excerpt word length - Truncate the excerpt of each post on the feed page to the specified number of words
 excerpt_length: 50
@@ -132,8 +132,8 @@ navbar-col: "#EAEAEA"
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
 page-col: "#FFFFFF"
-text-col: "#404040"
-link-col: "#008AFF"
+text-col: "#363636"
+link-col: "#0077ff"
 hover-col: "#0085A1"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
