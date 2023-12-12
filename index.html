@@ -14,13 +14,13 @@ cover-img: assets/img/world_map.jpg
     </head>
 <body>
 <h1>Introduction</h1>
-    <div>
+    <div id="initial-plot">
         <h2>Plot</h2>
         <p>This is a plot of a sine curve.It is a sample plot for us to display the way that we can format plots in our datastory. This paragraph serves only as filler test to beef up the page.
         {% include sample_plot.html %}
     </div>
 
-    <div>
+    <div id="main-content">
         <h2>Background Information on WikiSpeedia</h2>
         <p>
             WikiSpeedia is a game where the player is given a starting Wikipedia article and a finishing Wikipedia article, and the aim is to get from start to finish using as few hyperlinks 
@@ -30,10 +30,22 @@ cover-img: assets/img/world_map.jpg
         <h2>The Data</h2>
         <p>
             The data that we have from the game is as follows:
-            <ul>
-                <li class="filename">target.csv</li>
+            <ul class="filename">
+                <li>articles.tsv</li>
+                <li>categories.tsv</li>
+                <li>links.tsv</li>
+                <li>paths_finished.tsv</li>
+                <li>paths_unfinished.tsv</li>
+                <li>shortest-path-distance-matrix.txt</li>
             </ul>
+
+            We decided to investigate if there was a bias towards certain countries or world regions in both the articles that the game is based on, and subsequently how people played the game.
         </p>
-    </div>
+
+        <h2>The Analysis</h2>
+        <p>
+            
+        </p>
+        </div>
 
 </body>
