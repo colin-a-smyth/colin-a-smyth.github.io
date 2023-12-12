@@ -642,6 +642,7 @@ footer .footer-custom-content {
 }
 .intro-header.big-img {
   background: no-repeat center center;
+  background-image: url("assets/img/world_map.jpg");
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
