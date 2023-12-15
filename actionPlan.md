@@ -76,6 +76,7 @@ Q6: While controlling for as much of the bias in the dataset as we can, do we se
     - Link to part 2: user behaviour.
         - Small conclusion on the above and see if the biases are refelcted or reinforced by user behaviour.
         - Explain why this is important: How paths would be altered in LLM with thie information from player.
+    - Note the limitations of the model.
 
 5. Finished/unfinished paths
     - Graph (like wikiwomen) with the proportions of finished and unfinished but done with plotly, hover for more details by region.
