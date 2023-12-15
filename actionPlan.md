@@ -95,5 +95,15 @@ Q6: While controlling for as much of the bias in the dataset as we can, do we se
 8. Conclusion
     - Dataset is biased towards high income countries and against places like Micronesia and Polynesia.
     - This dataset could work for an LLM for the US but not for other regions, should be considered before training a model!
-    
+
+### Tasks
+
+- Colin
+    - Plotly
+    - 
+
+- Blanche
+    - Flourish (and Plotly)
+
+
 
