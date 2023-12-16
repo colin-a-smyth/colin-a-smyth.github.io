@@ -79,21 +79,27 @@ Q6: While controlling for as much of the bias in the dataset as we can, do we se
     - Note the limitations of the model.
 
 5. Finished/unfinished paths
-    - Graph (like wikiwomen) with the proportions of finished and unfinished but done with plotly, hover for more details by region.
+    - ~~Graph (like wikiwomen) with the proportions of finished and unfinished but done with plotly, hover for more details by region.~~
     - Results are obvious if we do not remove the confounder of article length/article with a lot of links.
     - Maybe there is human bias that is reinforcing the results but we cannot see.
     - Length/Time: Graph .....? 
     - Similar bias here based on length of articles.
     - Maybe we should describe the hubs, and see if the users do find the hubs (they do).
+  
+6. Occurances of a country in a path.
 
-6. Regression
+    - ~~Add error bars.~~
+    - Representative of how players use the countries.
+    - Should we remove the 'hubs' or match slightly better to get a real look at things?
+
+7. Regression
     - Can we do a regression to see what factors actually influence the players pathways?
 
-7. Ethics
+8. Ethics
     - Something short about ethics of analysing as we do.
     - Notes on how wiki articles are generated, and on who the editors are.
 
-8. Conclusion
+9. Conclusion
     - Dataset is biased towards high income countries and against places like Micronesia and Polynesia.
     - This dataset could work for an LLM for the US but not for other regions, should be considered before training a model!
 
@@ -101,7 +107,7 @@ Q6: While controlling for as much of the bias in the dataset as we can, do we se
 
 - Colin
     - Plotly
-    - 
+    - Look at what actually requires error bars and what they would signify in context.
 
 - Blanche
     - Flourish (and Plotly)
