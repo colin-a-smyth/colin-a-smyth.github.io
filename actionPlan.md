@@ -46,7 +46,7 @@ Q6: While controlling for as much of the bias in the dataset as we can, do we se
 1. Introduction
     - Show why this is important.
     - Short text to introduce dataset
-    - **Flourish map** to present the dataset and the regions that we will refer to, the income bands, and population size.
+    - **Flourish map** to present the dataset and the regions that we will refer to, the income bands, and population size. @Blanche
     - Small sentence to present the countries, say what is important to remember from the map.
         - Uniformly distributed number of countries in each income band.
 
