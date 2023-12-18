@@ -31,7 +31,7 @@ cover-img: assets/img/world_map.jpg
             fingertips. This range of data subsequently is proving useful in recent times in the training of Large Language Models 
             (LLMs) for a variety of tasks. Thus, any bias in Wikipedia if not handled correctly could prove disastrous for these models.
 
-            Wikispeedia is a game built off Wikipedia, in which players are tasked to navigate from one Wikipedia article to another, 
+            <br> Wikispeedia is a game built off Wikipedia, in which players are tasked to navigate from one Wikipedia article to another, 
             using only the hyperlinks in the articles. The aim is to get to the target article in as few clicks as possible. 
             In this project, we look at the bias in the representation of countries in the Wikispeedia dataset, and if this is then 
             reflected in the players' gameplay patterns. We will look at the player's behaviour, to see if it is a reflection of the bias 
@@ -92,28 +92,35 @@ cover-img: assets/img/world_map.jpg
 
             We decided to investigate if there was a bias towards certain countries or world regions in both the articles that the game is based on, and subsequently how people played the game.
         </p>
-
+        
+        <div class="flourish-embed flourish-map" data-src="visualisation/16189366">
+            <script src="https://public.flourish.studio/resources/embed.js">
+            </script>
+        </div>
+       
         <p>
-            <div class="flourish-embed flourish-map" data-src="visualisation/16189366"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+            <b>Key idea</b>: countries are uniformly distributed in each income band, some countries are bigger (population wise), some countries/regions are richer.
         </p>
 
         <h2>Analysis of the Wikipedia Articles</h2>
-        <p>
-            Here we will put the analysis that Tim and Zaineb did? TEST TEXT
-        </p>
+        <h3>Article lengths</h3>
+        <h3>Hyperlinks</h3>
+        <h3>Sentiment analysis</h3>
         
         <div class=plot>
             {% include finished_unfinished_region.html %}
         </div>
 
-        <h2>Results</h2>
-        <p>
-            Here we will put what we can draw from the analysis I suppose?
-        </p>
+        <h2>People playing the game reinforces the bias ?</h2>
+        <h3>Finished vs unfinished paths</h3>
 
-        <h2>People playing the game</h2>
+        <h2>Putting it all together</h2>
+        <h2>A bit about ethics</h2>
+
+        <h2>Conclusion</h2>
         <p>
-            Conclusion information perhaps here to finish it all off...
+            Dataset is biassed towards high income countries and against places like Micronesia and Polynesia.
+            This dataset could work for an LLM for the US but not for other regions, should be considered before training a model!
         </p>
         </div>
 
