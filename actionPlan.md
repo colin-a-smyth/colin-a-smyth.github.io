@@ -111,6 +111,54 @@ Q6: While controlling for as much of the bias in the dataset as we can, do we se
 
 - Blanche
     - Flourish (and Plotly)
+ACTION PLAN PLOTS
+
+plot 1.1: OK
+world map (flourish)
+
+plot 1.2: OK (IS COLIN OK WITH TITLE ?)
+repartition des pays par groupe economique (horizontal bar plot)  
+    
+plot 2: subplot OK
+merge using dropdown NOT OK
+box plot article length (plotly)
+
+    - country
+    - region
+    - economic status
+    - population
+    - article lengths
+    
+plot 3: OK BUT REMOVE COUNTRIES WEIRD
+hyperlinks
+
+    option1: map (flourish)
+    - country
+    - region
+    - economic status
+    - population ?
+    - links in
+    - links out
+    
+    option 2: bubble plot (plotly)
+    - country
+    - region
+    - economic status
+    - population (size of bubble) SPECIFY IN LEGEND !
+    - links in
+    - links out
+    
+plot 4: merge using dropdown
+
+    
+plot 5: OK
+stacked bar of finished ratio paths (plotly)
+
+
+plot 6: heat map regression
+
+
+plot 7: ??
 
 
 
