@@ -1,6 +1,7 @@
 ---
 layout: home
-title: Country Representation Bias in Wikispeedia Gameplay
+title:  Worldwide Wikispeedia: A Bias Check
+<!--Country Representation Bias in Wikispeedia Gameplay -->
 subtitle: The Datastory!
 cover-img: assets/img/world_map.jpg
 ---
@@ -16,30 +17,19 @@ cover-img: assets/img/world_map.jpg
     </style>
     </head>
 <body>
-<h1>Introduction</h1>
-    <div id="initial-plot">
-        <h2>Plot</h2>
-        <p>This is a plot of a sine curve. It is a sample plot for us to display the way that we can format plots in our datastory. This paragraph serves only as filler test to beef up the page.
-        {% include sample_plot.html %}
-    </div>
-
+<!-- <h1>Introduction</h1> -->
     <div id="main-content">
         <h2>Background Information on WikiSpeedia</h2>
         <p class="text-justify">
-            Wikipedia is a huge database of information with a large range of uses. From reading about every political scandal 
-            your favourite celebrity has been involved in, to learning about the origins of spaghetti, the information is at your 
-            fingertips. This range of data subsequently is proving useful in recent times in the training of Large Language Models 
-            (LLMs) for a variety of tasks. Thus, any bias in Wikipedia if not handled correctly could prove disastrous for these models.
+            Wikipedia is a huge database of information with a large range of uses. From reading about every political scandal your favourite celebrity has been involved in, to learning about the origins of spaghetti, the information is at your fingertips. This range of data subsequently is proving useful in recent times in the training of Large Language Models (LLMs) for a variety of tasks. Thus, any bias in Wikipedia if not handled correctly could prove disastrous for these models.
         </p>
         <p class="text-justify">
-            Wikispeedia is a game built off Wikipedia, in which players are tasked to navigate from one Wikipedia article to another, 
-            using only the hyperlinks in the articles. The aim is to get to the target article in as few clicks as possible. 
-            In this project, we look at the bias in the representation of countries in the Wikispeedia dataset, and if this is then 
-            reflected in the players' gameplay patterns. We will look at the player's behaviour, to see if it is a reflection of the bias 
-            already existing in the dataset, or if it takes a different or more extreme bias.
-
-            A bias in a dataset such as Wikipedia would be detrimental to all new models that are being trained on this dataset, and 
-            additionally is detrimental for the population trying to gather objective information from a source that is inherently biased.
+            Wikispeedia is a game built off Wikipedia, in which players are tasked to navigate from one Wikipedia article to another, using only the hyperlinks in the articles. The aim is to get to the target article in as few clicks as possible. You can play the game 
+            <a href="https://dlab.epfl.ch/wikispeedia/play/", target="_blank">here</a>
+        </p>
+        <p class="text-justify">
+            In this project, we look at the bias in the representation of countries in the Wikispeedia dataset, and if this is then reflected in the players' gameplay patterns. We will look at the player's behaviour, to see if it is a reflection of the bias already existing in the dataset, or if it takes a different or more extreme bias. A bias in a dataset such as Wikipedia would be detrimental to all new models that are being trained on this dataset, and additionally is detrimental for the population trying to gather objective information from a source that is inherently biassed.
+        </p>
 
 <!--             Wikipedia is a minefield of information. 
 
@@ -58,12 +48,12 @@ cover-img: assets/img/world_map.jpg
 
             A bias in a dataset such as Wikipedia would be detrimental to all new models that are being trained on this dataset, and 
             additionally is detrimental for the population trying to gather objective information from a source that is inherently biased. -->
-        </p>
+        
         
         <h2>The Data</h2>
         <p class="text-justify">
             The data that we have from the game is as follows:
-
+        </p>
             <ul>
                 <li class="filename">articles.tsv</li>
                 <ul class="filedescription">
@@ -90,35 +80,74 @@ cover-img: assets/img/world_map.jpg
                     <li>A matrix containing the shortest distances between all articles.</li>
                 </ul>
             </ul>
-
-            We decided to investigate if there was a bias towards certain countries or world regions in both the articles that the game is based on, and subsequently how people played the game.
+        <p class="text-justify">
+            We decided to investigate if there was a representation bias towards certain countries or world regions in both the articles that the game is based on, and subsequently how people played the game.
         </p>
         
-<div class="flourish-embed flourish-map" data-src="visualisation/16189366">
-    <script src="https://public.flourish.studio/resources/embed.js">
-    </script>
-</div>
+        
+        <div class="flourish-embed flourish-map" data-src="visualisation/16189366">
+            <script src="https://public.flourish.studio/resources/embed.js">
+            </script>
+        </div>
        
         <p>
-            <b>Key idea</b>: countries are uniformly distributed in each income band, some countries are bigger (population wise), some countries/regions are richer.
+            The map describes the different economic classification of the countries present in the dataset as well as the region they belong to according to the UN. It is also noticeable that some countries are bigger (population wise) and that some countries/regions are richer than others. The bar chart below shows us that countries are globally uniformly distributed in each income band.
         </p>
+        
+        <div class=plot>
+            {% include percentage_economic_classification.html %}
+        </div>
 
-        <h2>Analysis of the Wikipedia Articles</h2>
+    <h2>Let's have a closer look at the articles!</h2>
         <h3>Article lengths</h3>
+        <!-- if possible combine the two plot using dropdown -->
+        <div class=plot>
+            {% include article_length_region.html %}
+        </div>
+        <div class=plot>
+            {% include article_length_economic.html %}
+        </div>
         <p>
             Notably, the articles describing the countries of the world vary greatly in their lengths. We see countries such as Argentina, Peru and Spain with articles of more than 70,000 words, and conversely countries such as Martinique and Anguilla with less than 8,000 words in their articles. Indeed, this would make sense if the lengths of articles corresponded to something inherent to the country such as population or area, however we can see that there is a tendency for high-income countries to have longer articles than their lower-income  counterparts. This disparity is something to note, as it may reflect a blatant bias from the outset, however this is an important fact to consider when we are looking at the number of hyperlinks each article has. Of course, we would expect a longer article to have more hyperlinks, however is this always the case?
         </p>
-        <h3>Hyperlinks</h3>
-        <h3>Sentiment analysis</h3>
+        
+        <h3>Hyperlinks: a key ingredient to be well connected to the network of articles</h3>
+        <div class="flourish-embed flourish-survey" data-src="visualisation/16190148">
+            <script src="https://public.flourish.studio/resources/embed.js">
+            </script>
+        </div>
+        
+        <h3>A neutral tone ?</h3>
+        <!-- sentiment analysis -->
+        <p class="text-justify">
+            Wikipedia aims to keep a neural point of view (NPOV) across all of its articles. In order to test this claim across the articles describing countries, we ran a sentiment analysis model across each article. Rankings were given between -1 and 1, with -1 being certainly negative and 1 being certainly positive. All country articles received a sentiment score of between -0.2 and 0.2, which would suggest that these articles are meeting the NPOV criteria of Wikipedia. Great news !
+        </p>
+        
+        <!-- if possible combine using dropdown -->
+        <div class=plot>
+            {% include sentiment_economic_std.html %}
+        </div>
+        <div class=plot>
+            {% include sentiment_region_std.html %}
+        </div>
+        
+        <p class="text-justify">
+            There is however a slight disparity present when we look at the aggregated sentiment scores based on geographical region. Here, we can see a disparity between regions such as Australia and New Zealand and *******. This could suggest that there are certain regions of the world that are portrayed in a more positive light than others. We do have to consider however that some countries may just have a more negative history, whether through colonisation, war, famine or any other range of things, which will in turn reduce their sentiment score, even from a neutral standpoint.
+        </p>
+        
+
+    <h2>Ok, so the data has some inherent biases, but how do they manifest in how people play the game? </h2>
+        <h3>Finished vs unfinished paths</h3>
         
         <div class=plot>
             {% include finished_unfinished_region.html %}
         </div>
+        <p class="text-justify">
+            The region which sees the largest number of paths finished is Northern America, but this is not exactly a shock. We have seen the in- and out- degree of the United States of America is huge. The likelihood of finding something connected to your target in that article is quite high. It is more interesting to see that paths starting with countries in Micronesia and Polynesia have much less finished paths than their “western” counterparts.
+        </p>
 
-        <h2>People playing the game reinforces the bias ?</h2>
-        <h3>Finished vs unfinished paths</h3>
+        <h2>What really impacts the biases ?</h2>
 
-        <h2>Putting it all together</h2>
         <h2>A bit about ethics</h2>
 
         <h2>Conclusion</h2>
