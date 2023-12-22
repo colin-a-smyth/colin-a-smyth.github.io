@@ -88,7 +88,7 @@ cover-img: assets/img/world_map.jpg
             </ul>
         </p>
         
-    <h3>What countries are in our dataset?</h3>
+    <h2>What countries are in our dataset?</h2>
     
         <p class="text-justify">
             In this project, we followed the country classifications as outlined <a href="https://unctadstat.unctad.org/EN/Classifications.html">by the UN</a>. These countries can be seen in the map below.
@@ -120,7 +120,7 @@ cover-img: assets/img/world_map.jpg
             The articles describing the countries of the world vary greatly in their lengths. The box plot below shows the distribution of 
             article lengths for each country in our dataset.
         </p>
-        <h3>Article lengths</h3>
+        <h2>Article lengths</h2>
         <!-- if possible combine the two plot using dropdown -->
         <div class=plot>
             {% include article_length_region.html %}
@@ -146,7 +146,7 @@ cover-img: assets/img/world_map.jpg
             more hyperlinks, however is this always the case?
         </p>
         
-    <h3>Hyperlinks: a key ingredient to be well connected to the network of articles</h3>
+    <h2>Hyperlinks: a key ingredient to be well connected to the network of articles</h2>
 
         The map below shows simply the in- and out-degree of each countries article. Indeed in this plot we can see that 
         there is quite a strong cluster of high in-degree articles around Europe. 
@@ -162,7 +162,7 @@ cover-img: assets/img/world_map.jpg
             {% include standardized_in_degree.html %}
         </div>
         
-        <h3>A neutral tone ?</h3>
+        <h2>A neutral tone ?</h2>
         <p class="text-justify">
             Wikipedia aims to keep a neural point of view (NPOV) across all of its articles. In order 
             to test this claim across the articles describing countries, we ran a sentiment analysis 
@@ -199,7 +199,6 @@ cover-img: assets/img/world_map.jpg
         </p>
 
     <h2>Ok, so the data has some inherent biases, but how do they manifest in how people play the game? </h2>
-        <h3>Finished vs unfinished paths</h3>
         <p class="text-justify">
             Below we look at the number of finished and unfinished paths where a country article was a <b>target</b>.
         </p>
