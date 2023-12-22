@@ -106,7 +106,7 @@ cover-img: assets/img/world_map.jpg
             this is evident in our dataset here.
         </p>
         
-        <p>
+        <p class="text-justify">
             The bar chart below shows us how countries are distributed in each income band, with a slightly higher
             number of high-income countries, and slightly lower in the low-income category.
         </p>
@@ -116,7 +116,7 @@ cover-img: assets/img/world_map.jpg
         </div>
 
     <h2>Let's have a closer look at the articles!</h2>
-        <p>
+        <p class="text-justify">
             The articles describing the countries of the world vary greatly in their lengths. The box plot below shows the distribution of 
             article lengths for each country in our dataset.
         </p>
@@ -137,7 +137,7 @@ cover-img: assets/img/world_map.jpg
             {% include article_length_economic.html %}
         </div>
 
-        <p>    
+        <p class="text-justify">    
             This disparity is something to note, as it may reflect a blatant 
             bias resulting from higher income countries having extra information in their articles. This may then be the root of all other biases
             in the dataset. This could have a variety of causes that we cannot see, such as history, 
@@ -176,14 +176,14 @@ cover-img: assets/img/world_map.jpg
         </p>
         
         <!-- if possible combine using dropdown -->
-        <p>
+        <p class="text-justify">
             When grouped by both economic class and region, different results emerge. We see below that there is no significant disparity in the sentiments 
             of articles based on economic status.
         </p>
         <div class=plot>
             {% include sentiment_economic_std.html %}
         </div>
-        <p>
+        <p class="text-justify">
             However, some differences arise when we look at the sentiments grouped by geographical region.
         </p>
     
@@ -200,7 +200,7 @@ cover-img: assets/img/world_map.jpg
 
     <h2>Ok, so the data has some inherent biases, but how do they manifest in how people play the game? </h2>
         <h3>Finished vs unfinished paths</h3>
-        <p>
+        <p class="text-justify">
             Below we look at the number of finished and unfinished paths where a country article was a <b>target</b>.
         </p>
         <div class=plot>
@@ -213,12 +213,12 @@ cover-img: assets/img/world_map.jpg
             countries in Micronesia and Polynesia have much less finished paths than their “western” counterparts.
         </p>
 
-        <p>
+        <p class="text-justify">
             Indeed, knowing all of this, we would like to see if there is some correlation between all of these variables...
         </p>
 
         <h2>In walks regression analysis</h2>
-        <p>
+        <p class="text-justify">
             We began by looking at some direct correlations between variables, and we saw two of interest:
         </p>
 
