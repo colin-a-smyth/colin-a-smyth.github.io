@@ -177,8 +177,8 @@ cover-img: assets/img/world_map.jpg
         
         <!-- if possible combine using dropdown -->
         <p class="text-justify">
-            When grouped by both economic class and region, different results emerge. We see below that there is no significant disparity in the sentiments 
-            of articles based on economic status.
+            When grouped by both economic classification and region, different results emerge. We see below that there is no significant disparity in the sentiments 
+            of articles based on economic classification
         </p>
         <div class=plot>
             {% include sentiment_economic_std.html %}
@@ -219,27 +219,38 @@ cover-img: assets/img/world_map.jpg
 
         <h2>In walks regression analysis</h2>
         <p class="text-justify">
-            We began by looking at some direct correlations between variables, and we saw two of interest:
+            By looking at the correlation matrix between all of our variables, we saw that the in-degree has a high correlation with game success rate.
+            We wanted to see what, if anything, influeced the in-degree of an article. To do this, we performed linear regression analysis.
         </p>
 
-        <table class="center">
-          <tr>
-            <th>Variables</th>
-            <th>Correlation Coeff</th>
-          </tr>
-          <tr>
-            <td>Economic Region ~ In-degree</td>
-            <td>-0.43</td>
-          </tr>
-          <tr>
-            <td>Shortest Distance ~ In-degree</td>
-            <td>-0.64</td>
-          </tr>
-        </table>
         <p class="text-justify">
-            It may be obvious, but it is notable that a higher in-degree of the target article does indeed make the shortest path shorter. 
+            In-degree is an important attribute as this signifies how often this country is appears among other Wikipedia articles. 
+            A high in-degree means that there are a lot of articles regarding, for example, people with a relation to this country, or 
+            historical events that link to that country. A big population is naturally linked to having more famous people with a
+            Wikipedia article. Also, a strong economy allows a state to invest resources and time in innovation and science, which
+            generates more content that can published to Wikipedia and thus linked back to the country. Therefore, population size and economic
+            classification are very likely to have an influence on the in-degree of a countries article.
         </p>
 
+        <p class="text-justify">
+            Regression analysis shows that a reasonable amount of variance in the in-degrees is explained by the economic classification and
+            the log of the population variable (R-squared = 0.462). The log is taken here due to the power law distribution of the population.
+            When the region is considered in addition to these two variables, even more variance is explained (R-squared = 0.702)! This shows that,
+            even if we control for the two most influential confounders, the region still has an effect on the in-degree. 
+        </p>
+
+        <p class="text-justify">
+            Most notably, the positive effect size is largest for Northern America, Western Europe, and Australia and New Zealand, which are commonly
+            referred to as "Western" countries. For Northern America and Australia and New Zealand the affect is statistically significant, however for Western 
+            Europe it is not. On the contrary, Latin America, Northern Africa, Western Asia, Central Asia, Southern Asia and South-Eastern Asia
+            have a very large negative effect size, all of which are statistically significant.
+        </p>
+
+        <p class="text-justify">
+            This result further solidifies our theory that "Western" countries are overrepresented in the WikiSpeedia dataset, even if we control
+            for economic classification and population size.
+        </p>
+        
         <h2>Ethical Considerations</h2>
 
         <p class="text-justify">
@@ -276,9 +287,18 @@ cover-img: assets/img/world_map.jpg
         </div>
 
     <div id="footnotes">
-        <p id="footnote-1">[1] <a href="https://dl.acm.org/doi/full/10.1145/3597307">Link 1</a></p>
-        <p id="footnote-2">[2] <a href="https://journals.sagepub.com/doi/full/10.1177/20539517231165490">Link 2</a></p>
-        <p id="footnote-3">[3] <a href="https://arxiv.org/abs/1501.06307">Link 3</a></p>
+        <p id="footnote-1">[1] Navigli, R., Conia, S., & Ross, B. (2023). Biases in Large Language Models: Origins, Inventory, and Discussion. <i>J. Data and Information Quality 15</i>(2), Article 10.<a href="https://doi.org/10.1145/3597307">https://doi.org/10.1145/3597307</a></p>
+        <p id="footnote-2">[2] Lemieux, M. E., Zhang, R., & Tripodi, F. (2023). “Too Soon” to count? How gender and race cloud notability considerations on Wikipedia. <i>Big Data & Society, 10</i>(1). <a href="https://doi.org/10.1177/20539517231165490 ">https://doi.org/10.1177/20539517231165490 </a></p>
+        <p id="footnote-3">[3] Wagner, C., Garcia, D., Jadidi, M., & Strohmaier, M. (2015). It's a Man's Wikipedia? Assessing Gender Inequality in an Online Encyclopedia<a href="https://arxiv.org/abs/1501.06307">Link 3</a></p>
     </div>
+
+    @misc{wagner2015its,
+      title={It's a Man's Wikipedia? Assessing Gender Inequality in an Online Encyclopedia}, 
+      author={Claudia Wagner and David Garcia and Mohsen Jadidi and Markus Strohmaier},
+      year={2015},
+      eprint={1501.06307},
+      archivePrefix={arXiv},
+      primaryClass={cs.CY}
+}
 
 </body>
