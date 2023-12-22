@@ -24,7 +24,7 @@ cover-img: assets/img/world_map.jpg
         </p>
         <p class="text-justify">
             Wikispeedia is a game built off Wikipedia, in which players are tasked to navigate from one Wikipedia article to another, using only the hyperlinks in the articles. The aim is to get to the target article in as few clicks as possible. You can play the game 
-            <a href="https://dlab.epfl.ch/wikispeedia/play/", target="_blank">here</a>
+            <a href="https://dlab.epfl.ch/wikispeedia/play/", target="_blank">here</a>.
         </p>
         <p class="text-justify">
             In this project, we look at the bias in the representation of countries in the Wikispeedia dataset, and if this is then reflected in the players' gameplay patterns. We will look at the player's behaviour, to see if it is a reflection of the bias already existing in the dataset, or if it takes a different or more extreme bias. A bias in a dataset such as Wikipedia would be detrimental to all new models that are being trained on it, and additionally is detrimental for the population trying to gather objective information from a source that is inherently biased.
@@ -94,7 +94,7 @@ cover-img: assets/img/world_map.jpg
             </script>
         </div>
        
-        <p>
+        <p class="text-justify">
             The map describes the different economic classification of the countries present in the dataset as well as the region they belong to according to the UN. It is also noticeable that some countries are bigger (population wise) and that some countries/regions are richer than others. The bar chart below shows us that countries are almost uniformly distributed in each income band, with a slightly higher number of high-income countries.
         </p>
         
@@ -111,7 +111,7 @@ cover-img: assets/img/world_map.jpg
         <div class=plot>
             {% include article_length_economic.html %}
         </div>
-        <p>
+        <p class="text-justify">
             The articles describing the countries of the world vary greatly in their lengths. We see countries such as Argentina, Peru and Spain with articles of more than 70,000 words, and conversely countries such as Martinique and Anguilla with less than 8,000 words. Indeed, this would make sense if the lengths of articles corresponded to something inherent to the country such as population or area, however we can see that there is a tendency for high-income countries to have longer articles than their lower-income  counterparts. This disparity is something to note, as it may reflect a blatant bias from the outset, however this is an important fact to consider when we are looking at the number of hyperlinks each article has. Of course, we would expect a longer article to have more hyperlinks, however is this always the case?
         </p>
         
@@ -157,12 +157,12 @@ cover-img: assets/img/world_map.jpg
 
         <h2>A bit about ethics</h2>
 
-        <p>
+        <p class="text-justify">
             To navigate these complexities, we refocused our research on examining country representation within Wikipedia. This approach helps identify biases in the dataset and user navigation patterns. We hypothesize that analyzing representation by country can indirectly reveal racial biases. It's important to note that underrepresentation of certain countries does not necessarily indicate intentional racism by Wikipedia contributors. Rather, it may reflect systemic disparities, where countries with lower financial resources, often non-western, are less represented. By shifting our research question, we aim to mitigate the ethical risks associated with misinterpreting data on racial discrimination, opting for an inquiry that is more ethically sound.
         </p>
 
         <h2>Conclusion</h2>
-        <p>
+        <p class="text-justify">
             Dataset is biassed towards high income countries and against places like Micronesia and Polynesia.
             This dataset could work for an LLM for the US but not for other regions, should be considered before training a model!
         </p>
