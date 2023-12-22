@@ -180,14 +180,36 @@ cover-img: assets/img/world_map.jpg
         <h2>Ethical Considerations</h2>
 
         <p class="text-justify">
-            To navigate these complexities, we refocused our research on examining country representation within Wikipedia. This approach helps identify biases in the dataset and user navigation patterns. We hypothesize that analyzing representation by country can indirectly reveal racial biases. It's important to note that underrepresentation of certain countries does not necessarily indicate intentional racism by Wikipedia contributors. Rather, it may reflect systemic disparities, where countries with lower financial resources, often non-western, are less represented. By shifting our research question, we aim to mitigate the ethical risks associated with misinterpreting data on racial discrimination, opting for an inquiry that is more ethically sound.
+            The presence of biases in Wikipedia, such as gender biases that underrepresent women and perpetuate stereotypes, poses risks. These biases can distort public knowledge and, potentially, be significantly magnified by LLMs<a href="#footnote-1">[1]</a>. In addition to gender bias, biases related to ethnicity and race are among others notable societal issues<a href="#footnote-2">[2]</a>.
         </p>
 
+        <p class="text-justify">
+            Initially, our research aimed to categorize individuals with a Wikipedia article by ethnicity, to perform similar analysis done 
+            on gender.However, we encountered significant technical and ethical challenges. The fluidity of ethnic groups and the personal 
+            nature of ethnic identity make accurate classification difficult, increasing the likelihood of errors. A particular ethical
+            dilemma arose from the potential misuse of findings: if our flawed ethnicity-based analysis suggested an absence of racial bias in 
+            Wikipedia,such results could be erroneously exploited to downplay the seriousness of ethnic discrimination on the platform<a href="#footnote-3">[3]</a>.
+        </p>
+
+        <p class="text-justify">
+            To navigate these complexities, we refocused our research on examining country representation within Wikipedia. This approach helps
+            identify biases in the dataset and user navigation patterns. We hypothesize that analyzing representation by country can indirectly
+            reveal racial biases. It's important to note that underrepresentation of certain countries does not necessarily indicate 
+            intentional racism by Wikipedia contributors. Rather, it may reflect systemic disparities, where countries with lower financial 
+            resources, often non-western, are less represented. By shifting our research question, we aim to mitigate the ethical risks 
+            associated with misinterpreting data on racial discrimination, opting for an inquiry that is more ethically sound. </p>
+        </p>
         <h2>Conclusion</h2>
         <p class="text-justify">
             Dataset is biassed towards high income countries and against places like Micronesia and Polynesia.
             This dataset could work for an LLM for the US but not for other regions, should be considered before training a model!
         </p>
         </div>
+
+    <div id="footnotes">
+        <p id="footnote-1">[1] <a href="https://dl.acm.org/doi/full/10.1145/3597307">Link 1</a></p>
+        <p id="footnote-2">[2] <a href="https://journals.sagepub.com/doi/full/10.1177/20539517231165490">Link 2</a></p>
+        <p id="footnote-3">[3] <a href="https://arxiv.org/abs/1501.06307">Link 3</a></p>
+    </div>
 
 </body>
