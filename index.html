@@ -171,28 +171,66 @@ cover-img: assets/img/world_map.jpg
         </p>
         
         <!-- if possible combine using dropdown -->
+        <p>
+            When grouped by both economic class and region, different results emerge. We see below that there is no significant disparity in the sentiments 
+            of articles based on economic status.
+        </p>
         <div class=plot>
             {% include sentiment_economic_std.html %}
         </div>
+        <p>
+            However, some differences arise when we look at the sentiments grouped by geographical region.
+        </p>
+    
         <div class=plot>
             {% include sentiment_region_std.html %}
         </div>
         
         <p class="text-justify">
-            There is however a slight disparity present when we look at the aggregated sentiment scores based on geographical region. Here, we can see a disparity between regions such as Australia and New Zealand and *******. This could suggest that there are certain regions of the world that are portrayed in a more positive light than others. We do have to consider however that some countries may just have a more negative history, whether through colonisation, war, famine or any other range of things, which will in turn reduce their sentiment score, even from a neutral standpoint.
+            Here, we can see a disparity between Northern Africa, and the regions Australia and New Zealand, and Western Europe. 
+            This could suggest that there are certain regions of the world that are portrayed in a more positive light than others. 
+            We do have to consider however that some countries may just have a more negative history, whether through colonisation, 
+            war, famine or any other range of things, which will in turn reduce their sentiment score, even from a neutral standpoint.
         </p>
-        
 
     <h2>Ok, so the data has some inherent biases, but how do they manifest in how people play the game? </h2>
         <h3>Finished vs unfinished paths</h3>
-        
+        <p>
+            Below we look at the number of finished and unfinished paths where a country article was a <b>target</b>.
+        </p>
         <div class=plot>
             {% include finished_unfinished_region.html %}
         </div>
         <p class="text-justify">
-            The region which sees the largest number of paths finished is Northern America, but this is not exactly a shock. We have seen the in- and out- degree of the United States of America is huge. The likelihood of finding something connected to your target in that article is quite high. It is more interesting to see that paths starting with countries in Micronesia and Polynesia have much less finished paths than their “western” counterparts.
+            The region which sees the largest number of paths finished is Northern America, but this is not exactly a shock. 
+            We have seen the in- and out- degree of the United States of America is huge. The likelihood of finding something
+            connected to your target in that article is quite high. It is more interesting to see that paths starting with 
+            countries in Micronesia and Polynesia have much less finished paths than their “western” counterparts.
         </p>
 
+        <p>
+            Indeed, knowing all of this, we would like to see if there is some correlation between all of these variables...
+        </p>
+
+        <h2>In walks regression analysis</h2>
+        <p>
+            We began by looking at some direct correlations between variables, and we saw two of interest:
+        </p>
+
+        <table>
+          <tr>
+            <th>Variables</th>
+            <th>Correlation Coeff</th>
+          </tr>
+          <tr>
+            <td>Economic Region ~ In-degree</td>
+            <td>-0.43</td>
+          </tr>
+          <tr>
+            <td>Shortest Distance ~ In-degree</td>
+            <td>-0.64</td>
+          </tr>
+        </table>
         <h2>What really impacts the biases ?</h2>
 
         <h2>Ethical Considerations</h2>
